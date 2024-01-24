@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Screen</title>
+    <style>
+        body {
+            font-family: Poppins-Regular;
+            background-image:url("makeup.jpg");
+            background-size: 100% 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #efc7c7;
+            padding: 60px;
+            margin-right: 20%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(187, 66, 66, 0.1);
+            width: 300px;
+            
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+          outline: none;
+	        border: none;
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            
+            border-radius: 4px;
+        }
+
+        button {
+            background: transparent;
+            background-color: #e59aa8;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #de2424;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script>
+        function login() {
+            var usernameInput = document.getElementById('username').value;
+            var passwordInput = document.getElementById('password').value;
+
+            // Hardcoded credentials for demonstration purposes
+            var hardcodedUsername = 'user123';
+            var hardcodedPassword = 'pass123';
+
+            if (usernameInput === hardcodedUsername && passwordInput === hardcodedPassword) 
+            {
+                alert('Login successful!');
+                 window.location.replace("Homepage.html");     
+
+
+                // Redirect or perform other actions after successful login
+            } else {
+                alert('Invalid credentials. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
